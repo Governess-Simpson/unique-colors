@@ -29,8 +29,23 @@
     }
   }
 
-.buttons, #carousel {
+.buttons, #carousel, #intro {
     position: relative;
     top: 500px;
     
+}
+
+#red {
+  width: 100px;
+  height: 50px;
+  font-size: 30px;
+  border-radius: 10%;
+  border: thin solid darkred;
+  background-color: whitesmoke;
+  color: red;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+  padding-left: 10px;
+  font-family: monospace;
 }

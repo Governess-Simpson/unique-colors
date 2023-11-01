@@ -7,6 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./style.css">
+        <script src="./app.js"></script>
     </head>
     <body>
         <div class="box">
@@ -15,10 +16,12 @@
         <div>
             <p>What's your favorite color? We'll find some similar, unique shades that you'll love!</p>
             <hr>
-            <button class="buttons" name='red' type="button">Red</button>
-            <button class="buttons" name='blue' type='button'>Blue</button>
-            <button class="buttons" name='green' type='button'>Green</button>
-            <button class="buttons" name='yellow' type='button'>Yellow</button>
+            <button class="buttons" value='red' type="button" onclick='changeColor(value)'>Red</button>
+            <button class="buttons" value='blue' type='button'>Blue</button>
+            <button class="buttons" value='green' type='button'>Green</button>
+            <button class="buttons" value='yellow' type='button'>Yellow</button>
+
+            <p id="test" style="visibility: hidden">Testy test test</p>
         </div>
     </body>
 </html>

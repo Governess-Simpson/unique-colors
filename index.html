@@ -16,12 +16,15 @@
         <div>
             <p>What's your favorite color? We'll find some similar, unique shades that you'll love!</p>
             <hr>
-            <button class="buttons" value='red' type="button" onclick='changeColor(value)'>Red</button>
+
+            <!-- When button is pressed, the value is passed into the function that determines which color carousel to display to the user.-->
+            <button class="buttons" value='red' type="button" onclick='changeColor(this.value)'>Red</button>
             <button class="buttons" value='blue' type='button'>Blue</button>
             <button class="buttons" value='green' type='button'>Green</button>
             <button class="buttons" value='yellow' type='button'>Yellow</button>
 
-            <p id="test" style="visibility: hidden">Testy test test</p>
+            <!-- After the button has been pressed, the corresponding color carousel shows up here!-->
+            <p id="carousel"></p>
         </div>
     </body>
 </html>

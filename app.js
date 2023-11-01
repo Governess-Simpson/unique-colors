@@ -1,5 +1,4 @@
-let carousel = [];
-
+// Initial set of colors to cycle through based on user selection.
 const colorCarousel = {
     'red': ['garnet', 'currant', 'sangria'],
     'blue': ['azure', 'lapis', 'admiral'],
@@ -7,8 +6,8 @@ const colorCarousel = {
     'yellow': ['canary', 'tuscan_sun', 'daffodil']
 }
 
-function changeColor(e){
-    const selectedColor = e.value;
-    console.log(selectedColor);
-    document.getElementById("test").style.visibility = "visible";
+function changeColor(selectedColor){
+    // Injects the stringified array into the HTML based on the initial ID.
+    const carouselID = document.getElementById("carousel");
+    carouselID.innerHTML = JSON.stringify(colorCarousel[selectedColor]);
 }

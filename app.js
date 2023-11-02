@@ -6,7 +6,25 @@ let colorCarousel = {
     'yellow': ['canary', 'tuscan_sun', 'daffodil']
 }
 
-// colorCarousel = JSON.stringify(colorCarousel)
+// Stores the hex values of the unique color, which we'll use to update the placeholder text color.
+let uniqueColorsInfo = {
+    // Red
+    'garnet': '830E0D',
+    'currant': 'AD3D3C',
+    'sangria': '92000A',
+    // Yellow
+    'canary': 'FFFF99',
+    'tuscan_sun': 'FFD84D',
+    'daffodil': 'FFFF31',
+    // Blue
+    'azure': '007FFF',
+    'lapis': '26619C',
+    'admiral': '1D1C57',
+    // Green
+    'chartreuse': '7FFF00',
+    'parakeet': '1AA36D',
+    'fern': '71BC78'
+}
 
 function setUniqueColor(id, color){
     return id.innerHTML = color;
@@ -14,15 +32,12 @@ function setUniqueColor(id, color){
 
 function changeColor(selectedColor){
     // Injects the stringified array into the HTML based on the initial ID.
-    // const carouselID = document.getElementById("carousel");
     const color_1 = document.getElementById("color_1");
     const color_2 = document.getElementById("color_2");
     const color_3 = document.getElementById("color_3");
     const isHidden = document.getElementById('hidden');
 
     const selectedColorArray = colorCarousel[selectedColor];
-    console.log(selectedColorArray)
-    console.log(isHidden, isHidden.style.display);
 
     if (!isHidden.style.display){
         isHidden.style.display = 'block'
@@ -30,8 +45,6 @@ function changeColor(selectedColor){
 
     // For each unique color (inside the bucket of the original color category), we will display them on-screen.
     selectedColorArray.forEach(color => {
-        console.log(color, typeof color)
-        console.log(selectedColorArray[0], selectedColorArray[1], selectedColorArray[2])
         switch(true){
             case selectedColorArray[0] === color:
                 setUniqueColor(color_1, color);

@@ -15,12 +15,12 @@
     background: linear-gradient(to left, #f06 0%, #60f 100%);
     /* Give it an Opacity of 0 and create your animation property: */
     opacity: 0;
-    animation: bg 5s ease-in-out 0s infinite alternate-reverse;
+    animation: fadeIn 5s ease-in-out 0s infinite alternate-reverse;
     z-index: -1;
   }
 
 /* Now call the keyframe-function */
-@keyframes bg {
+@keyframes fadeIn {
     0% {
       opacity: 0;
     }
@@ -39,6 +39,11 @@
   position: absolute;
   left: 250px;
   top: 300px;
+  font-size: 45px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  animation: fadeIn 3s;
 }
 
 #color_2 {
@@ -51,6 +56,10 @@
   position: absolute;
   right: 350px;
   top: 300px;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 #red {

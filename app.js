@@ -18,9 +18,15 @@ function changeColor(selectedColor){
     const color_1 = document.getElementById("color_1");
     const color_2 = document.getElementById("color_2");
     const color_3 = document.getElementById("color_3");
+    const isHidden = document.getElementById('hidden');
 
     const selectedColorArray = colorCarousel[selectedColor];
     console.log(selectedColorArray)
+    console.log(isHidden, isHidden.style.visibility);
+
+    if (!isHidden.style.visibility){
+        isHidden.style.visibility = 'visible'
+    }
 
     // For each unique color (inside the bucket of the original color category), we will display them on-screen.
     selectedColorArray.forEach(color => {
@@ -41,4 +47,5 @@ function changeColor(selectedColor){
                 break;
         }
     });
+
 }

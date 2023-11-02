@@ -22,10 +22,10 @@ function changeColor(selectedColor){
 
     const selectedColorArray = colorCarousel[selectedColor];
     console.log(selectedColorArray)
-    console.log(isHidden, isHidden.style.visibility);
+    console.log(isHidden, isHidden.style.display);
 
-    if (!isHidden.style.visibility){
-        isHidden.style.visibility = 'visible'
+    if (!isHidden.style.display){
+        isHidden.style.display = 'block'
     }
 
     // For each unique color (inside the bucket of the original color category), we will display them on-screen.

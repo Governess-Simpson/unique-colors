@@ -26,19 +26,19 @@ let uniqueColorsInfo = {
     'fern': '71BC78'
 }
 
-function setUniqueColor(id, color){
-    return id.innerHTML = color;
-}
 
-function changeColor(selectedColor){
-    // Injects the stringified array into the HTML based on the initial ID.
-    const color_1 = document.getElementById("color_1");
-    const color_2 = document.getElementById("color_2");
-    const color_3 = document.getElementById("color_3");
-    const isHidden = document.getElementById('hidden');
+// Injects the stringified array into the HTML based on the initial ID.
+const color_1 = document.getElementById("color_1");
+const color_2 = document.getElementById("color_2");
+const color_3 = document.getElementById("color_3");
+const isHidden = document.getElementById('hidden');
 
-    const selectedColorArray = colorCarousel[selectedColor];
+const selectedColorArray = colorCarousel[selectedColor];
 
+// Updates the ID from the HTML tag with the corresponding color.
+const setUniqueColorText = (id, color) => id.innerHTML = color;
+
+function displayUniqueColorText(selectedColor){
     if (!isHidden.style.display){
         isHidden.style.display = 'block'
     }
@@ -47,13 +47,13 @@ function changeColor(selectedColor){
     selectedColorArray.forEach(color => {
         switch(true){
             case selectedColorArray[0] === color:
-                setUniqueColor(color_1, color);
+                setUniqueColorText(color_1, color);
                 break;
             case selectedColorArray[1] === color:
-                setUniqueColor(color_2, color);
+                setUniqueColorText(color_2, color);
                 break;
             case selectedColorArray[2] === color:
-                setUniqueColor(color_3, color);
+                setUniqueColorText(color_3, color);
                 break;
             default:
                 console.log(`Error. ${color} does not equal ${selectedColorArray[0]}`);

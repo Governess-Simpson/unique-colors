@@ -19,9 +19,9 @@
 
             <!-- Displaying the unique colors on-screen (will be hidden), which will have an on-hover effect and change color based on the unique color selected.-->
             <div id='hidden' class="hidden">
-                <p id="color_1">Color 1</p>
-                <p id="color_2">Color 2</p>
-                <p id="color_3">Color 3</p>
+                <p id="color_1" onclick="changeBackground(this.id)">Color 1</p>
+                <p id="color_2" onclick="changeBackground(this.id)">Color 2</p>
+                <p id="color_3" onclick="changeBackground(this.id)">Color 3</p>
             </div>
 
             <!-- When button is pressed, the value is passed into the function that determines which color carousel to display to the user.-->
@@ -29,6 +29,7 @@
             <button class="buttons" id="blue" value='blue' type='button' onclick='displayUniqueColorText(this.value)'>Blue</button>
             <button class="buttons" id="green" value='green' type='button' onclick='displayUniqueColorText(this.value)'>Green</button>
             <button class="buttons" id="yellow" value='yellow' type='button' onclick='displayUniqueColorText(this.value)'>Yellow</button>
+            <button class="buttons" id="reset" type='button' onclick="resetBackground()">Reset Background</button>
             
 
         </div>

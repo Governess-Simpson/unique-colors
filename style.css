@@ -42,21 +42,34 @@
   font-size: 45px;
   color: #fff;
   text-align: center;
-  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  text-shadow: 0 0 10px black, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
   animation: fadeIn 5s;
+}
+
+#color_1:hover, #color_2:hover, #color_3:hover {
+  cursor: pointer;
 }
 
 #color_2 {
   position: absolute;
   top: 450px;
   left: 650px;
+  font-size: 45px;
   color: #fff;
+  text-align: center;
+  text-shadow: 0 0 10px black, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
+  animation: fadeIn 5s;
 }
 
 #color_3 {
   position: absolute;
   right: 350px;
   top: 300px;
+  font-size: 45px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 10px black, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
+  animation: fadeIn 5s;
 }
 
 .hidden {

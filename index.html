@@ -9,15 +9,12 @@
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <div class="box">
-            <p>Hello</p>
-        </div>
         <div>
-            <p id="intro">What's your favorite color? We'll find some similar, unique shades that you'll love!</p>
+            <h3 id="intro">What's your favorite color? We'll find some similar, unique shades that you'll love!</h3>
             <hr>
 
             <!-- Displaying the unique colors on-screen (will be hidden), which will have an on-hover effect and change color based on the unique color selected.-->
-            <div id='hidden' class="hidden">
+            <div id="hidden" class="hidden">
                 <p id="color_1">Color 1</p>
                 <p id="color_2">Color 2</p>
                 <p id="color_3">Color 3</p>
@@ -28,8 +25,7 @@
             <button class="buttons" id="blue" value='blue' type='button' onclick='displayUniqueColorText(this.value)'>Blue</button>
             <button class="buttons" id="green" value='green' type='button' onclick='displayUniqueColorText(this.value)'>Green</button>
             <button class="buttons" id="yellow" value='yellow' type='button' onclick='displayUniqueColorText(this.value)'>Yellow</button>
-            <button class="buttons" id="reset" type='button' onclick="resetBackground()">Reset Background</button>
-            
+            <button class="buttons" id="reset" type='button' onclick="resetBackground()">Reset Background</button> 
 
         </div>
         <script src="./app.js" defer></script>

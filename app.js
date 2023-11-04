@@ -33,13 +33,18 @@ const color_3 = document.getElementById("color_3");
 const isHidden = document.getElementById('hidden');
 
 const colorIdArray = [color_1, color_2, color_3];
+let isOn = false;
 
 
 // Updates the ID from the HTML tag with the corresponding color.
 const setUniqueColorText = (id, color) => id.innerHTML = color;
 const updateTextColor = (id, color) => id.style.color = uniqueColorsInfo[color];
-const resetBackground = () => document.body.style.backgroundColor = "#fff";
-
+const resetBackground = () => {
+    document.body.style.backgroundColor = "#fff";
+    if (isHidden.style.display){
+        isHidden.style.display = '';
+    };
+};
 
 function displayUniqueColorText(selectedColor){
     const selectedColorArray = colorCarousel[selectedColor];
@@ -53,10 +58,8 @@ function displayUniqueColorText(selectedColor){
     selectedColorArray.forEach(color => {
         switch(true){
             case selectedColorArray[0] === color:
-                console.log(color_1.innerHTML, color, color_1)
                 setUniqueColorText(color_1, color);
                 updateTextColor(color_1, color);
-                console.log(color_1.innerHTML, color)
                 break;
             case selectedColorArray[1] === color:
                 setUniqueColorText(color_2, color);

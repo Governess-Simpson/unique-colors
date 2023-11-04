@@ -33,8 +33,6 @@ const color_3 = document.getElementById("color_3");
 const isHidden = document.getElementById('hidden');
 
 const colorIdArray = [color_1, color_2, color_3];
-let isOn = false;
-
 
 // Updates the ID from the HTML tag with the corresponding color.
 const setUniqueColorText = (id, color) => id.innerHTML = color;

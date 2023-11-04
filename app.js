@@ -26,26 +26,20 @@ let uniqueColorsInfo = {
     'fern': '#71BC78'
 }
 
+// Injects the stringified array into the HTML based on the initial ID.
+const color_1 = document.getElementById("color_1");
+const color_2 = document.getElementById("color_2");
+const color_3 = document.getElementById("color_3");
+const isHidden = document.getElementById('hidden');
 
-    // Injects the stringified array into the HTML based on the initial ID.
-    const color_1 = document.getElementById("color_1");
-    const color_2 = document.getElementById("color_2");
-    const color_3 = document.getElementById("color_3");
+const colorIdArray = [color_1, color_2, color_3];
 
-    const isHidden = document.getElementById('hidden');
-
-    const colorIdArray = [color_1, color_2, color_3];
 
 // Updates the ID from the HTML tag with the corresponding color.
 const setUniqueColorText = (id, color) => id.innerHTML = color;
 const updateTextColor = (id, color) => id.style.color = uniqueColorsInfo[color];
-
-function changeBackground(colorElementID) {
-    const uniqueColorName = document.getElementById(colorElementID).innerHTML;
-    document.body.style.backgroundColor = uniqueColorsInfo[uniqueColorName];
-}
-
 const resetBackground = () => document.body.style.backgroundColor = "#fff";
+
 
 function displayUniqueColorText(selectedColor){
     const selectedColorArray = colorCarousel[selectedColor];
@@ -79,3 +73,9 @@ function displayUniqueColorText(selectedColor){
     });
 
 }
+
+for(const id of colorIdArray){
+    id.addEventListener('click', function(e) { 
+        console.log(e.target.innerHTML);
+        document.body.style.backgroundColor = uniqueColorsInfo[e.target.innerHTML]; 
+}, false) };

@@ -75,6 +75,7 @@ function displayUniqueColorText(selectedColor){
 
 }
 
+// Listens for when the color text is selected; the background then changes to that corresponding color.
 for(const id of colorIdArray){
     id.addEventListener('click', function(e) { 
         console.log(e.target.innerHTML);
